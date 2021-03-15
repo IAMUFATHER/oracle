@@ -3,7 +3,7 @@
 第一个测试,可优化,效率较高
 cost=5,rows=20,predicate information中有一次索引搜索access,一次全表搜索filter
 ![avatar](pic1_1.png)
-在优化中,建议我们在deoartments表上创建一个基于DEPARTMENT_NAME和DEPARTMENT_ID字段的索引,
+**在优化中,建议我们在deoartments表上创建一个基于DEPARTMENT_NAME和DEPARTMENT_ID字段的索引,
 这样就可以加快查询DEPARTMENT_NAME的速度.在创建这个索引之后,可以看到查询1的执行计划如下图,
 对比可以看出,谓词中已没有全表搜索filter,之有索引搜索access,其他性能指标也随之提升了.
 ![avatar](pic1_2.png)
